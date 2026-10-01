@@ -1,0 +1,138 @@
+name: 不具合の報告（テーマ改善 動作確認モジュール）
+description: 動作確認モジュール（Pleasanter 1.5.8.9）で見つかった表示崩れ・スクリプトエラーなどの報告
+title: "[動作確認] "
+labels: ["bug", "theme-preflight"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        テーマ改善 動作確認モジュールをご確認いただき、ありがとうございます。
+        表示崩れや動作不良を見つけましたら、わかる範囲で結構ですのでご記入ください（各項目は任意です）。
+        画像・サイトパッケージなどのファイルは、各記入欄にドラッグ＆ドロップで添付できます。
+        不具合報告は公開されます。個人情報・業務データ・認証情報・機密情報を含めないでください。添付ファイルやコードは必ず内容を確認し、匿名化してください。安全に匿名化できない場合は添付しないでください。
+
+  - type: input
+    id: module-version
+    attributes:
+      label: モジュールバージョン
+      description: 動作確認モジュールのバージョン
+      value: "1.5.8.9"
+    validations:
+      required: false
+
+  - type: input
+    id: current-version
+    attributes:
+      label: 運用中のバージョン
+      description: ふだんお使いの Pleasanter のバージョン（例：1.5.3.0）
+      placeholder: "1.5.x.x"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: check-method
+    attributes:
+      label: 確認方法
+      description: README「4. 確認・修正の手順」のどの方法で確認したか
+      options:
+        - 方法A：新しい環境で確認
+        - 方法B：運用データのコピー（バックアップから復元したDB）で確認
+        - 方法C：運用中のデータで確認
+        - その他・未使用
+    validations:
+      required: false
+
+  - type: dropdown
+    id: screen
+    attributes:
+      label: 発生画面
+      options:
+        - 一覧画面
+        - 編集画面
+        - ダッシュボード
+        - その他
+    validations:
+      required: false
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: どのような不具合か、一言で
+      placeholder: 例）編集画面で独自ボタンの位置が崩れる
+    validations:
+      required: false
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 現状の結果
+      description: 実際に起きていること
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する結果
+      description: 本来どうなってほしいか
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 発生させるまでの操作手順
+      placeholder: |
+        1. ○○のサイトを開く
+        2. △△を操作する
+        3. □□が崩れる
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 再現環境
+      description: OS・ブラウザ・データベース（DBMS）など
+      placeholder: |
+        - OS：Windows 11 / Ubuntu 24.04 など
+        - ブラウザ：Chrome / Edge / Firefox（バージョン）
+        - DBMS：PostgreSQL / SQL Server / MySQL
+    validations:
+      required: false
+
+  - type: textarea
+    id: custom-code
+    attributes:
+      label: 関連するカスタム・PleasanterUiLint の結果
+      description: 影響していそうな独自のスタイル／スクリプト／HTML や、PleasanterUiLint の指摘（findings.csv など）があれば貼り付け・添付してください
+    validations:
+      required: false
+
+  - type: textarea
+    id: site-package
+    attributes:
+      label: サイトパッケージ（添付）
+      description: |
+        再現用のサイトパッケージを、この欄にドラッグ＆ドロップで添付してください。
+        ※ GitHub の仕様上、専用のアップロードボタンは設けられません（この欄にドラッグ＆ドロップすると添付されます）。
+        ※ サイトパッケージ（.json）はそのままでは添付できない場合があります。その際は zip に圧縮してから添付してください。
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: スクリーンショット
+      description: 画面のスクリーンショットがあれば、この欄にドラッグ＆ドロップで添付してください
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 備考
+    validations:
+      required: false
