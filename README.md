@@ -6,8 +6,8 @@ Pleasanter のテーマまわりを刷新する「テーマ改善」を予定し
 
 > **対象**：Pleasanter をご利用中で、サイトに独自の **スタイル（CSS）・スクリプト（JavaScript）・HTML** を登録されているユーザー／サイト管理者  
 > **ベースバージョン**：Pleasanter 1.5.8.1  
-> **モジュールバージョン**：Pleasanter 1.5.8.9  
-> **動作確認モジュールの配布**：2026年9月末　／　**正式リリース予定**：2027年1月  
+> **モジュールバージョン**：Pleasanter 1.5.8.10（脆弱性対応版）  
+> **動作確認モジュールの配布**：2026年9月末（2026年11月に 1.5.8.10 へ更新）　／　**正式リリース予定**：2027年1月  
 > **動作確認モジュールの入手**：本リポジトリの [Releases](https://github.com/Implem/Implem.Pleasanter.UiThemesPreflight/releases) からダウンロード
 
 > [!CAUTION]
@@ -54,7 +54,7 @@ UIの世代（レイアウト）とテーマ（配色）を分離し、新しい
 ## 3. 事前確認ツール：PleasanterUiLint
 
 **PleasanterUiLint** は、「どのカスタムが、どこで影響を受けるか」を**手作業で探さなくても機械的に洗い出せる**ツールです。
-動作確認モジュールとあわせて、**[PleasanterUiLint.zip](https://github.com/Implem/Implem.Pleasanter.UiThemesPreflight/releases/download/1.5.8.9/PleasanterUiLint.zip) で配布**します。
+動作確認モジュールとあわせて、**[PleasanterUiLint.zip](https://github.com/Implem/Implem.Pleasanter.UiThemesPreflight/releases/download/1.5.8.10/PleasanterUiLint.zip) で配布**します。
 
 - 運用中の Pleasanter に登録された **スタイル・スクリプト・HTML** を読み込み、今回の刷新で**影響を受ける箇所を一覧で指摘**します。
     - HTML は、その中のクラス名・ID と、`<script>`・`<style>` の中身を調べます。
@@ -204,6 +204,7 @@ python tools/check.py --repo <公開リポジトリを clone したフォルダ>
 | ---------------- | ------------------------------------ |
 | **2026年9月末**  | 動作確認モジュールの配布             |
 | 2026年10月〜12月 | ご確認・修正の期間（ドラフトで準備） |
+| **2026年11月**   | 動作確認モジュールを 1.5.8.10 に更新（脆弱性対応） |
 | **2027年1月**    | 正式リリース（予定）／切り替え       |
 
 ---
@@ -241,7 +242,7 @@ python tools/check.py --repo <公開リポジトリを clone したフォルダ>
 2. 手動インストール（Windows）：<https://pleasanter.org/ja/manual/setup/installation/install-manually/getting-started-pleasanter-windows/>
 3. インストール手順の一覧（Linux 等）：<https://pleasanter.org/ja/manual/setup/installation/>
 4. Pleasanter の公開リポジトリ（PleasanterUiLint の実行に必要）：<https://github.com/Implem/Implem.Pleasanter>
-5. PleasanterUiLint（事前確認ツール）：<https://github.com/Implem/Implem.Pleasanter.UiThemesPreflight/releases/download/1.5.8.9/PleasanterUiLint.zip>
+5. PleasanterUiLint（事前確認ツール）：<https://github.com/Implem/Implem.Pleasanter.UiThemesPreflight/releases/download/1.5.8.10/PleasanterUiLint.zip>
 6. ドラフト機能マニュアル（修正の準備に使用）：<https://pleasanter.org/ja/manual/managers-guide/manage-table/common/draft/>
 7. GitHub Issue（不具合のご連絡）：<https://github.com/Implem/Implem.Pleasanter.UiThemesPreflight/issues>
 8. Pleasanter専用フォーム（不具合のご連絡）：<https://demo.pleasanter.org/forms/3453b7b4e51741f9a22956072cc7e443/new>
